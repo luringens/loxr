@@ -7,4 +7,7 @@ fn main() {
     chunk.push_code(const_index, 1);
     chunk.push_code(OpCode::Return as u8, 1);
     chunk.disassemble();
+
+    let mut vm = VirtualMachine::new(chunk);
+    vm.run();
 }
